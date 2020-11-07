@@ -1,6 +1,7 @@
 import importlib
 import re
 from typing import Optional, List
+from pyrogram import Client
 
 from telegram import Message, Chat, Update, Bot, User
 from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
@@ -121,6 +122,12 @@ def send_help(chat_id, text, keyboard=None):
                                 parse_mode=ParseMode.MARKDOWN,
                                 reply_markup=keyboard)
 
+@pyrogram.Client.on_callback_query()
+async def cb_handler(bot, update):
+
+       if 'close' in update.data:
+          await update.message.delete()
+
 
 @run_async
 def test(bot: Bot, update: Update):
@@ -155,9 +162,11 @@ def start(bot: Bot, update: Update, args: List[str]):
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
 
                 parse_mode=ParseMode.MARKDOWN,disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="➕ ADD ME", url="t.me/{}?startgroup=true".format(bot.username)),  InlineKeyboardButton(text="SOURCE CODE", url="https://github.com/jithumon/tgbot")],
-                     [InlineKeyboardButton(text="🕯️GROUP", url="https://t.me/Anylink_Group"), InlineKeyboardButton(text="🎬 CHANNEL", url="https://t.me/Anylink_Movies"), InlineKeyboardButton(text="🎬 YOUTUBE", url="http://www.youtube.com/c/TRACKSTUDIOUCQL8PQluas7HDdvXBHCYPMw")],
-                     [InlineKeyboardButton(text="💡HELP", url="https://t.me/{}?start=help".format(bot.username)) ]]))
+                    [[InlineKeyboardButton(text="🕯️GROUP", url="https://t.me/Anylink_Group"), InlineKeyboardButton(text="🎬 CHANNEL", url="https://t.me/Anylink_Movies")],
+                     [InlineKeyboardButton(text="🎬 YOUTUBE", url="http://www.youtube.com/c/TRACKSTUDIOUCQL8PQluas7HDdvXBHCYPMw")],
+                     [InlineKeyboardButton(text="➕ ADD ME", url="t.me/{}?startgroup=true".format(bot.username)),  InlineKeyboardButton(text="SOURCE CODE", url="https://github.com/Hillard-har/tgbot")], 
+                     [InlineKeyboardButton(text="💡 HELP", url="https://t.me/{}?start=help".format(bot.username))],
+                     [InlineKeyboardButton(text="🔐 CLOSE", callback_data="close")]])) 
     else:
         update.effective_message.reply_text("ചത്തിട്ടില്ലാ...")
 
