@@ -22,11 +22,11 @@ PM_START_TEXT = """
 
 ᴍʏ ɴᴀᴍᴇ ɪs sᴛᴇᴍ ᴠᴇʀsɪᴏɴ 3.0
 
-ɪ ᴀᴍ ᴛʜᴇ ᴍᴀɴᴀɢᴇʀ ᴏғ <i><a href="https://t.me/Anylink_Group">ᴀɴʏʟɪɴᴋ ɢʀᴏᴜᴘ.</a></i>
+ɪ ᴀᴍ ᴛʜᴇ ᴍᴀɴᴀɢᴇʀ ᴏғ [ᴀɴʏʟɪɴᴋ ɢʀᴏᴜᴘ](https://t.me/Anylink_Group) 
 
-ɪ ᴄᴀɴ ᴍᴀɴᴀɢᴇ ᴀ ɢʀᴏᴜᴘ ᴀs ᴘᴇʀ <i><a href="https://t.me/trackstudio_official">ᴀᴅᴍɪɴ's.</a></i> ᴡɪsʜ.
+ɪ ᴄᴀɴ ᴍᴀɴᴀɢᴇ ᴀ ɢʀᴏᴜᴘ ᴀs ᴘᴇʀ [ᴀᴅᴍɪɴ's](https://t.me/trackstudio_official) ᴡɪsʜ.
 
-🔱 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ 👉 <b><a href="https://t.me/Hillard_Har">ʜɪʟʟᴀʀᴅ ʜᴀʀ.</a></b>
+🔱 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ 👉 [ʜɪʟʟᴀʀᴅ ʜᴀʀ](https://t.me/Hillard_Har)
 """
 
 HELP_STRINGS = """
