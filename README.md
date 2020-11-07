@@ -182,6 +182,6 @@ The `__stats__()` function is for retrieving module statistics, eg number of use
 through the `/stats` command, which is only available to the bot owner.
 
 
-<b>ᴛʜᴀɴᴋs ᴛᴏ <i><a href="https://t.me/jithumon">ᴊɪᴛʜᴜ ᴍᴀᴛʜᴇᴡ ᴊᴏsᴇᴘʜ</a></i> ғᴏʀ ʜɪs ʙᴏᴛ
+<b>ᴛʜᴀɴᴋs ᴛᴏ <i><a href="https://telegram.me/jithumon">ᴊɪᴛʜᴜ ᴍᴀᴛʜᴇᴡ ᴊᴏsᴇᴘʜ</a></i> ғᴏʀ ʜɪs ʙᴏᴛ
 
 
