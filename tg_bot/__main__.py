@@ -19,55 +19,41 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
 
-ʜᴇʟʟᴏ, {} 
+ഹായ് {}, എന്റെ പേര് {}! ഞാൻ [ഇദ്ദേഹം](tg://user?id={}) നോക്കി നടത്തുന്ന ഒരു അടിപൊളി അഡ്മിൻ ബോട്ടാണ്.
 
-ᴍʏ ɴᴀᴍᴇ ɪs sᴛᴇᴍ ᴠᴇʀsɪᴏɴ 3.0
+എന്നെ നിർമ്മിച്ചിരിക്കുന്നത് python3 യിൽ python-telegram-bot ലൈബ്രറി ഉപയോഗിച്ചാണ്. ഞാൻ പൂർണ്ണമായിട്ടും ഓപ്പൺസോഴ്സ്ഡ് ആണ്. എന്റെ കോഡ് നിങ്ങൾക്ക് [ഇവിടെ](https://github.com/jithumon/tgbot) കാണുവാൻ സാധിക്കും.
 
-ɪ ᴀᴍ ᴛʜᴇ ᴍᴀɴᴀɢᴇʀ ᴏғ <i><a href="https://t.me/Anylink_Group">ᴀɴʏʟɪɴᴋ ɢʀᴏᴜᴘ.</a></i>
+എന്നെപ്പോലെ ഒരു അഡ്മിൻ ബോട്ടിനെ ഉണ്ടാക്കുവാൻ താഴെ കൊടുത്തിരിക്കുന്ന വീഡിയോ കാണുക.
 
-ɪ ᴄᴀɴ ᴍᴀɴᴀɢᴇ ᴀ ɢʀᴏᴜᴘ ᴀs ᴘᴇʀ <i><a href="https://t.me/trackstudio_official">ᴀᴅᴍɪɴ's.</a></i> ᴡɪsʜ.
+എന്റെ അപ്ഡേറ്റുകളെക്കുറിച്ചും പ്രവർത്തനത്തെപറ്റിയും അറിയുവാൻ അപ്ഡേറ്റ് ചാനൽ സബ്സ്ക്രൈബ് ചെയ്യുക.
 
-🔱 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ 👉 <b><a href="https://t.me/Hillard_Har">ʜɪʟʟᴀʀᴅ ʜᴀʀ.</a></b>
+കൂടെ താഴെ കൊടുത്തിരിക്കുന്ന ടെക് ഗെയിമിംഗ് യൂട്യൂബ് ചാനൽ സബ്സ്ക്രൈബ് ചെയ്യാനും മറക്കേണ്ട.
+
+ലഭ്യമായ കമാന്റുകളെപ്പറ്റി അറിയുവാൻ /help അമർത്തുക.
 
 """
 
 HELP_STRINGS = """
-💡 𝐘𝐨𝐮 𝐍𝐞𝐞𝐝 𝐇𝐞𝐥𝐩 ? 
+Hey there! My name is *{}*.
+I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
+the things I can help you with.
+*Main* commands available:
+ - /start: start the bot
+ - /help: PM's you this message.
+ - /help <module name>: PM's you info about that module.
+ - /donate: information about how to donate!
+ - /settings:
+   - in PM: will send you your settings for all supported modules.
+   - in a group: will redirect you to pm, with all that chat's settings.
+{}
+And the following:
+""".format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-ʏᴏᴜ ᴄᴀɴ ᴄᴀʟʟ ᴍᴇ ᴀs *{}*.
-
-ʜᴇʀᴇ ᴀʀᴇ sᴏᴍᴇ ᴄᴏᴍᴍᴀɴᴅs ᴛʜᴀᴛ ᴍɪɢʜᴛ ʜᴇʟᴘ ʏᴏᴜ..
- 
-𝑴𝒂𝒊𝒏 𝒄𝒐𝒎𝒎𝒂𝒏𝒅 𝒂𝒓𝒆 
-
-⭕ /start - ʏᴏᴜ ᴄᴀɴ ᴄʜᴇᴄᴋ ᴍᴇ ᴀʟɪᴠᴇ ᴏʀ ɴᴏᴛ.
-
-⭕ /help  - ᴘᴍ's ʏᴏᴜ ᴛʜɪs ᴍᴇssᴀɢᴇ.
-
-⭕ /donate - ɪғ ʏᴏᴜ ʟɪᴋᴇ ᴍᴇ ʏᴏᴜ ᴄᴀɴ ᴅᴏɴᴀᴛᴇ ᴍᴇ
-
-⭕ /settings -
-
-📌 ɪɴ ᴘᴍ - ɪ ᴡɪʟʟ sᴇɴᴅ ʏᴏᴜ ʏᴏᴜʀ sᴇᴛᴛɪɴɢs ғᴏʀ ᴀʟʟ sᴜᴘᴘᴏʀᴛᴇᴅ ᴍᴏᴅᴜʟᴇs.
-📌 ɪɴ ᴀ ɢʀᴏᴜᴘ - ɪ ᴡɪʟʟ ʀᴇᴅɪʀᴇᴄᴛ ʏᴏᴜ ᴛᴏ ᴘᴍ, ᴡɪᴛʜ ᴀʟʟ ᴛʜᴀᴛ ᴄʜᴀᴛ's sᴇᴛᴛɪɴɢs.
-
-⭕ /help <module name> -  ɪ ᴄᴀɴ ᴘʀɪᴠᴀᴛᴇʟʏ ᴛᴇʟʟ ʏᴏᴜ ᴛʜᴇ ɪɴғᴏ ᴀʙᴏᴜᴛ ᴛʜᴀᴛ ᴍᴏᴅᴜʟᴇ.
-
-ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ 👉 [ʜɪʟʟᴀʀᴅ ʜᴀʀ](https://t.me/hillard_har) 
-
-😊 ᴀɴᴅ ᴛʜᴇsᴇ ᴀʀᴇ ᴍʏ ғᴇᴀᴛᴜʀᴇs👇 
-""".format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nMaintained By [Hillard Har](https://t.me/hillard_har)")
-
-DONATE_STRING = """Heya, Glad To Hear That You Want To Donate!
-
-My [Creator](https://t.me/hillard_har) Said That You Want to donate for this Person Who made me.
- 
-It took lots of work for [My Father](t.me/SonOfLars) to get me to where I am now, and every donation helps \
+DONATE_STRING = """Heya, glad to hear you want to donate!
+It took lots of work for [my creator](t.me/SonOfLars) to get me to where I am now, and every donation helps \
 motivate him to make me even better. All the donation money will go to a better VPS to host me, and/or beer \
 (see his bio!). He's just a poor student, so every little helps!
-
 There are two ways of paying him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
-
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -163,13 +149,13 @@ def start(bot: Bot, update: Update, args: List[str]):
             update.effective_message.reply_text(
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
 
-                parse_mode=ParseMode.MARKDOWN,disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="➕ ADD ME", url="t.me/{}?startgroup=true".format(bot.username)),  InlineKeyboardButton(text="SOURCE CODE", url="https://github.com/jithumon/tgbot")],
-                     [InlineKeyboardButton(text="🕯️GROUP", url="https://t.me/Anylink_Group"), InlineKeyboardButton(text="🎬 CHANNEL", url="https://t.me/Anylink_Movies"), InlineKeyboardButton(text="🎬 YOUTUBE", url="http://www.youtube.com/c/TRACKSTUDIOUCQL8PQluas7HDdvXBHCYPMw")],
-                     [InlineKeyboardButton(text="💡HELP", url="https://t.me/{}?start=help".format(bot.username)) ]]))
+                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
+                    [[InlineKeyboardButton(text="🎉 Add me to your group", url="t.me/{}?startgroup=true".format(bot.username)),  InlineKeyboardButton(text="🤖 Make Own Admin Bot", url="https://youtu.be/W6CLKrehy6w")],
+                     [InlineKeyboardButton(text="👥 Support Group", url="https://t.me/KeralaBots"), InlineKeyboardButton(text="🔔 Update Channel", url="https://t.me/KochuUpdates")],
+                     [InlineKeyboardButton(text="🎬 Youtube Channel", url="https://www.youtube.com/stealthtechnogaming?sub_confirmation=1"), InlineKeyboardButton(text="🛠 Help", url="https://t.me/{}?start=help".format(bot.username)) ]]))
 
     else:
-        update.effective_message.reply_text("Not Dead Yet 😎...")
+        update.effective_message.reply_text("ചത്തിട്ടില്ലാ...")
 
 
 # for test purposes
@@ -216,13 +202,12 @@ def help_button(bot: Bot, update: Update):
             query.message.reply_text(text=text,
                                      parse_mode=ParseMode.MARKDOWN,
                                      reply_markup=InlineKeyboardMarkup(
-                                         [[InlineKeyboardButton(text="↩️ BACK", callback_data="help_back")]]))
+                                         [[InlineKeyboardButton(text="Back", callback_data="help_back")]]))
 
         elif prev_match:
             curr_page = int(prev_match.group(1))
             query.message.reply_text(HELP_STRINGS,
                                      parse_mode=ParseMode.MARKDOWN,
-                                     disable_web_page_preview=True, 
                                      reply_markup=InlineKeyboardMarkup(
                                          paginate_modules(curr_page - 1, HELPABLE, "help")))
 
@@ -230,14 +215,12 @@ def help_button(bot: Bot, update: Update):
             next_page = int(next_match.group(1))
             query.message.reply_text(HELP_STRINGS,
                                      parse_mode=ParseMode.MARKDOWN,
-                                     disable_web_page_preview=True,
                                      reply_markup=InlineKeyboardMarkup(
                                          paginate_modules(next_page + 1, HELPABLE, "help")))
 
         elif back_match:
             query.message.reply_text(text=HELP_STRINGS,
                                      parse_mode=ParseMode.MARKDOWN,
-                                     disable_web_page_preview=True,
                                      reply_markup=InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help")))
 
         # ensure no spinny white circle
