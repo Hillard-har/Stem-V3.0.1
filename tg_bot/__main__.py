@@ -160,10 +160,10 @@ def start(bot: Bot, update: Update, args: List[str]):
                     [[InlineKeyboardButton(text="🕯️GROUP", url="https://t.me/Anylink_Group"), InlineKeyboardButton(text="🎬 CHANNEL", url="https://t.me/Anylink_Movies")],
                      [InlineKeyboardButton(text="🎬 YOUTUBE", url="http://www.youtube.com/c/TRACKSTUDIOUCQL8PQluas7HDdvXBHCYPMw")],
                      [InlineKeyboardButton(text="➕ ADD ME", url="t.me/{}?startgroup=true".format(bot.username)),  InlineKeyboardButton(text="SOURCE CODE", url="https://github.com/Hillard-har/tgbot")], 
-                     [InlineKeyboardButton(text="💡 HELP", url="https://t.me/{}?start=help".format(bot.username))],
-                     [InlineKeyboardButton(text="🔐 CLOSE", callback_data="close")]])) 
+                     [InlineKeyboardButton(text="💡 HELP", url="https://t.me/{}?start=help".format(bot.username))]]))
+                     #[InlineKeyboardButton(text="🔐 CLOSE", callback_data="close")]])) 
     else:
-        update.effective_message.reply_text("ചത്തിട്ടില്ലാ...")
+        update.effective_message.reply_text("ɴᴏᴛ ᴅᴇᴀᴅ ʏᴇᴛ 😎...")
 
 
 # for test purposes
