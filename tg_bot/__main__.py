@@ -159,7 +159,7 @@ def start(bot: Bot, update: Update, args: List[str]):
                 parse_mode=ParseMode.MARKDOWN,disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton(text="🕯️GROUP", url="https://t.me/Anylink_Group"), InlineKeyboardButton(text="🎬 CHANNEL", url="https://t.me/Anylink_Movies")],
                      [InlineKeyboardButton(text="🎬 YOUTUBE", url="http://www.youtube.com/c/TRACKSTUDIOUCQL8PQluas7HDdvXBHCYPMw")],
-                     [InlineKeyboardButton(text="➕ ADD ME", url="t.me/{}?startgroup=true".format(bot.username)),  InlineKeyboardButton(text="SOURCE CODE", url="https://github.com/Hillard-har/tgbot")], 
+                     [InlineKeyboardButton(text="➕ ADD ME", url="t.me/{}?startgroup=true".format(bot.username)),  InlineKeyboardButton(text="SOURCE CODE", url="https://github.com/Hillard-har/STEM-v3.0")], 
                      [InlineKeyboardButton(text="💡 HELP", url="https://t.me/{}?start=help".format(bot.username))]]))
                      #[InlineKeyboardButton(text="🔐 CLOSE", callback_data="close")]])) 
     else:
