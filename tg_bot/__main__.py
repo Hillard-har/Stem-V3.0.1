@@ -159,7 +159,7 @@ def start(bot: Bot, update: Update, args: List[str]):
             update.effective_message.reply_text(
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
 
-                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
+                parse_mode=ParseMode.MARKDOWN,disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton(text="➕ ADD ME", url="t.me/{}?startgroup=true".format(bot.username)),  InlineKeyboardButton(text="SOURCE CODE", url="https://github.com/jithumon/tgbot")],
                      [InlineKeyboardButton(text="🕯️GROUP", url="https://t.me/Anylink_Group"), InlineKeyboardButton(text="🎬 CHANNEL", url="https://t.me/Anylink_Movies"), InlineKeyboardButton(text="🎬 YOUTUBE", url="http://www.youtube.com/c/TRACKSTUDIOUCQL8PQluas7HDdvXBHCYPMw")],
                      [InlineKeyboardButton(text="💡HELP", url="https://t.me/{}?start=help".format(bot.username)) ]]))
@@ -218,6 +218,7 @@ def help_button(bot: Bot, update: Update):
             curr_page = int(prev_match.group(1))
             query.message.reply_text(HELP_STRINGS,
                                      parse_mode=ParseMode.MARKDOWN,
+                                     disable_web_page_preview=True, 
                                      reply_markup=InlineKeyboardMarkup(
                                          paginate_modules(curr_page - 1, HELPABLE, "help")))
 
@@ -225,12 +226,14 @@ def help_button(bot: Bot, update: Update):
             next_page = int(next_match.group(1))
             query.message.reply_text(HELP_STRINGS,
                                      parse_mode=ParseMode.MARKDOWN,
+                                     disable_web_page_preview=True,
                                      reply_markup=InlineKeyboardMarkup(
                                          paginate_modules(next_page + 1, HELPABLE, "help")))
 
         elif back_match:
             query.message.reply_text(text=HELP_STRINGS,
                                      parse_mode=ParseMode.MARKDOWN,
+                                     disable_web_page_preview=True,
                                      reply_markup=InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help")))
 
         # ensure no spinny white circle
