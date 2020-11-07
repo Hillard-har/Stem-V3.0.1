@@ -34,9 +34,7 @@ HELP_STRINGS = """
 
 ʏᴏᴜ ᴄᴀɴ ᴄᴀʟʟ ᴍᴇ ᴀs *{}*.
 
-ʜᴇʀᴇ ᴀʀᴇ sᴏᴍᴇ ᴄᴏᴍᴍᴀɴᴅs ᴛʜᴀᴛ ᴍɪɢʜᴛ ʜᴇʟᴘ ʏᴏᴜ..
- 
-𝑴𝒂𝒊𝒏 𝒄𝒐𝒎𝒎𝒂𝒏𝒅 𝒂𝒓𝒆 
+𝑯𝒆𝒓𝒆 𝒂𝒓𝒆 𝒔𝒐𝒎𝒆 𝒄𝒐𝒎𝒎𝒂𝒏𝒅𝒔 𝒕𝒉𝒂𝒕 𝒎𝒊𝒈𝒉𝒕 𝒉𝒆𝒍𝒑 𝒚𝒐𝒖.. 
 
 ⭕ /start - ʏᴏᴜ ᴄᴀɴ ᴄʜᴇᴄᴋ ᴍᴇ ᴀʟɪᴠᴇ ᴏʀ ɴᴏᴛ.
 
@@ -51,9 +49,8 @@ HELP_STRINGS = """
 
 ⭕ /help <module name> -  ɪ ᴄᴀɴ ᴘʀɪᴠᴀᴛᴇʟʏ ᴛᴇʟʟ ʏᴏᴜ ᴛʜᴇ ɪɴғᴏ ᴀʙᴏᴜᴛ ᴛʜᴀᴛ ᴍᴏᴅᴜʟᴇ.
 
-⭕ ᴀɴᴅ ᴛʜᴇsᴇ ᴀʀᴇ ᴍʏ ғᴇᴀᴛᴜʀᴇs 👇 
+𝑨𝒏𝒅 𝒕𝒉𝒆𝒔𝒆 𝒂𝒓𝒆 𝒎𝒚 𝒇𝒆𝒂𝒕𝒖𝒓𝒆𝒔👇 
 
-{} 
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
