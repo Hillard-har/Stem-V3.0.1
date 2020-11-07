@@ -30,19 +30,30 @@ PM_START_TEXT = """
 """
 
 HELP_STRINGS = """
-Hey there! My name is *{}*.
-I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
-the things I can help you with.
-*Main* commands available:
- - /start: start the bot
- - /help: PM's you this message.
- - /help <module name>: PM's you info about that module.
- - /donate: information about how to donate!
- - /settings:
-   - in PM: will send you your settings for all supported modules.
-   - in a group: will redirect you to pm, with all that chat's settings.
-{}
-And the following:
+💡 𝐘𝐨𝐮 𝐍𝐞𝐞𝐝 𝐇𝐞𝐥𝐩 ? 
+
+ʏᴏᴜ ᴄᴀɴ ᴄᴀʟʟ ᴍᴇ ᴀs *{}*.
+
+ʜᴇʀᴇ ᴀʀᴇ sᴏᴍᴇ ᴄᴏᴍᴍᴀɴᴅs ᴛʜᴀᴛ ᴍɪɢʜᴛ ʜᴇʟᴘ ʏᴏᴜ..
+ 
+𝑴𝒂𝒊𝒏 𝒄𝒐𝒎𝒎𝒂𝒏𝒅 𝒂𝒓𝒆 
+
+⭕ /start - ʏᴏᴜ ᴄᴀɴ ᴄʜᴇᴄᴋ ᴍᴇ ᴀʟɪᴠᴇ ᴏʀ ɴᴏᴛ.
+
+⭕ /help  - ᴘᴍ's ʏᴏᴜ ᴛʜɪs ᴍᴇssᴀɢᴇ.
+
+⭕ /donate - ɪғ ʏᴏᴜ ʟɪᴋᴇ ᴍᴇ ʏᴏᴜ ᴄᴀɴ ᴅᴏɴᴀᴛᴇ ᴍᴇ
+
+⭕ /settings -
+
+📌 ɪɴ ᴘᴍ - ɪ ᴡɪʟʟ sᴇɴᴅ ʏᴏᴜ ʏᴏᴜʀ sᴇᴛᴛɪɴɢs ғᴏʀ ᴀʟʟ sᴜᴘᴘᴏʀᴛᴇᴅ ᴍᴏᴅᴜʟᴇs.
+📌 ɪɴ ᴀ ɢʀᴏᴜᴘ - ɪ ᴡɪʟʟ ʀᴇᴅɪʀᴇᴄᴛ ʏᴏᴜ ᴛᴏ ᴘᴍ, ᴡɪᴛʜ ᴀʟʟ ᴛʜᴀᴛ ᴄʜᴀᴛ's sᴇᴛᴛɪɴɢs.
+
+⭕ /help <module name> -  ɪ ᴄᴀɴ ᴘʀɪᴠᴀᴛᴇʟʏ ᴛᴇʟʟ ʏᴏᴜ ᴛʜᴇ ɪɴғᴏ ᴀʙᴏᴜᴛ ᴛʜᴀᴛ ᴍᴏᴅᴜʟᴇ.
+
+⭕ ᴀɴᴅ ᴛʜᴇsᴇ ᴀʀᴇ ᴍʏ ғᴇᴀᴛᴜʀᴇs 👇 
+
+{} 
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
@@ -145,11 +156,10 @@ def start(bot: Bot, update: Update, args: List[str]):
             update.effective_message.reply_text(
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
 
-                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="🎉 Add me to your group", url="t.me/{}?startgroup=true".format(bot.username)),  InlineKeyboardButton(text="🤖 Make Own Admin Bot", url="https://youtu.be/W6CLKrehy6w")],
-                     [InlineKeyboardButton(text="👥 Support Group", url="https://t.me/KeralaBots"), InlineKeyboardButton(text="🔔 Update Channel", url="https://t.me/KochuUpdates")],
-                     [InlineKeyboardButton(text="🎬 Youtube Channel", url="https://www.youtube.com/stealthtechnogaming?sub_confirmation=1"), InlineKeyboardButton(text="🛠 Help", url="https://t.me/{}?start=help".format(bot.username)) ]]))
-
+                parse_mode=ParseMode.MARKDOWN,disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
+                    [[InlineKeyboardButton(text="➕ ADD ME", url="t.me/{}?startgroup=true".format(bot.username)),  InlineKeyboardButton(text="SOURCE CODE", url="https://github.com/jithumon/tgbot")],
+                     [InlineKeyboardButton(text="🕯️GROUP", url="https://t.me/Anylink_Group"), InlineKeyboardButton(text="🎬 CHANNEL", url="https://t.me/Anylink_Movies"), InlineKeyboardButton(text="🎬 YOUTUBE", url="http://www.youtube.com/c/TRACKSTUDIOUCQL8PQluas7HDdvXBHCYPMw")],
+                     [InlineKeyboardButton(text="💡HELP", url="https://t.me/{}?start=help".format(bot.username)) ]]))
     else:
         update.effective_message.reply_text("ചത്തിട്ടില്ലാ...")
 
