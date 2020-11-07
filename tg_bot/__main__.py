@@ -56,7 +56,7 @@ HELP_STRINGS = """
 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ 👉 [ʜɪʟʟᴀʀᴅ ʜᴀʀ](https://t.me/hillard_har) 
 
 😊 ᴀɴᴅ ᴛʜᴇsᴇ ᴀʀᴇ ᴍʏ ғᴇᴀᴛᴜʀᴇs👇 
-"""#.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nMaintained By [Hillard Har](https://t.me/hillard_har)")
+""".format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nMaintained By [Hillard Har](https://t.me/hillard_har)")
 
 DONATE_STRING = """Heya, Glad To Hear That You Want To Donate!
 
