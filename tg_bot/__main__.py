@@ -19,40 +19,44 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
 
-Hello, {} 
+ʜᴇʟʟᴏ, {} 
 
-My Name is STEM Version 3.0
+ᴍʏ ɴᴀᴍᴇ ɪs sᴛᴇᴍ ᴠᴇʀsɪᴏɴ 3.0
 
-ɪ ᴀᴍ the manager of [Anylink Group](https://t.me/Anylink_Group) 
+ɪ ᴀᴍ ᴛʜᴇ ᴍᴀɴᴀɢᴇʀ ᴏғ <i><a href="https://t.me/Anylink_Group">ᴀɴʏʟɪɴᴋ ɢʀᴏᴜᴘ.</a></i>
 
-I can manage group as per [Admin's](https://t.me/trackstudio_official) wish. 
+ɪ ᴄᴀɴ ᴍᴀɴᴀɢᴇ ᴀ ɢʀᴏᴜᴘ ᴀs ᴘᴇʀ <i><a href="https://t.me/trackstudio_official">ᴀᴅᴍɪɴ's.</a></i> ᴡɪsʜ.
 
-Maintained By [Hillard Har](https://t.me/hillard_har)
+🔱 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ 👉 <b><a href="https://t.me/Hillard_Har">ʜɪʟʟᴀʀᴅ ʜᴀʀ.</a></b>
 
 """
 
 HELP_STRINGS = """
-𝐘𝐨𝐮 𝐍𝐞𝐞𝐝 𝐇𝐞𝐥𝐩 ? 
+💡 𝐘𝐨𝐮 𝐍𝐞𝐞𝐝 𝐇𝐞𝐥𝐩 ? 
 
-My name is *{}*.
+ʏᴏᴜ ᴄᴀɴ ᴄᴀʟʟ ᴍᴇ ᴀs *{}*.
 
-Here are some commands that might help you..
+ʜᴇʀᴇ ᴀʀᴇ sᴏᴍᴇ ᴄᴏᴍᴍᴀɴᴅs ᴛʜᴀᴛ ᴍɪɢʜᴛ ʜᴇʟᴘ ʏᴏᴜ..
  
-*Main* commands are:
+𝑴𝒂𝒊𝒏 𝒄𝒐𝒎𝒎𝒂𝒏𝒅 𝒂𝒓𝒆 
 
- ⭕ /start - You Check me Alive or Not. 
- ⭕ /help  - PM's you this message.
- ⭕ /help <module name> - I can Privately tell You the info about that module.
- ⭕ /donate - If You Like me You can donate me!
- ⭕ /settings -
+⭕ /start - ʏᴏᴜ ᴄᴀɴ ᴄʜᴇᴄᴋ ᴍᴇ ᴀʟɪᴠᴇ ᴏʀ ɴᴏᴛ.
 
-   📌 In PM - I will send you your settings for all supported modules.
-   📌 In a group - I will redirect you to pm, with all that chat's settings.
+⭕ /help  - ᴘᴍ's ʏᴏᴜ ᴛʜɪs ᴍᴇssᴀɢᴇ.
 
-{}
+⭕ /donate - ɪғ ʏᴏᴜ ʟɪᴋᴇ ᴍᴇ ʏᴏᴜ ᴄᴀɴ ᴅᴏɴᴀᴛᴇ ᴍᴇ
 
-😊And these are my features 👇 
-""".format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nMaintained By [Hillard Har](https://t.me/hillard_har)")
+⭕ /settings -
+
+📌 ɪɴ ᴘᴍ - ɪ ᴡɪʟʟ sᴇɴᴅ ʏᴏᴜ ʏᴏᴜʀ sᴇᴛᴛɪɴɢs ғᴏʀ ᴀʟʟ sᴜᴘᴘᴏʀᴛᴇᴅ ᴍᴏᴅᴜʟᴇs.
+📌 ɪɴ ᴀ ɢʀᴏᴜᴘ - ɪ ᴡɪʟʟ ʀᴇᴅɪʀᴇᴄᴛ ʏᴏᴜ ᴛᴏ ᴘᴍ, ᴡɪᴛʜ ᴀʟʟ ᴛʜᴀᴛ ᴄʜᴀᴛ's sᴇᴛᴛɪɴɢs.
+
+⭕ /help <module name> -  ɪ ᴄᴀɴ ᴘʀɪᴠᴀᴛᴇʟʏ ᴛᴇʟʟ ʏᴏᴜ ᴛʜᴇ ɪɴғᴏ ᴀʙᴏᴜᴛ ᴛʜᴀᴛ ᴍᴏᴅᴜʟᴇ.
+
+ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ 👉 [ʜɪʟʟᴀʀᴅ ʜᴀʀ](https://t.me/hillard_har) 
+
+😊 ᴀɴᴅ ᴛʜᴇsᴇ ᴀʀᴇ ᴍʏ ғᴇᴀᴛᴜʀᴇs👇 
+"""#.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nMaintained By [Hillard Har](https://t.me/hillard_har)")
 
 DONATE_STRING = """Heya, Glad To Hear That You Want To Donate!
 
